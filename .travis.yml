@@ -2,5 +2,7 @@ language: c
 compiler: gcc
 
 script:
-  - make -C clean all
+  - make clean
+  - make all
   - hello
+  - make clean
