@@ -1,22 +1,6 @@
 language: c
 compiler: gcc
 
-hello:build:
-    stage: build
-    script:
-      - make -C clean all
-    only:
-      - master
-    artifacts:
-      expire_in: 1 hour
-      paths:
-        - hello
-
-hello:test:
-    stage: test
-    script:
-      - hello
-    only:
-      - master
-    dependencies:
-      - hello:build
+script:
+  - make -C clean all
+  - hello
